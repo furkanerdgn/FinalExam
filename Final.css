@@ -1,0 +1,47 @@
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    width: 50px;
+    height: 50px;
+  }
+  .h1{
+      text-align: center;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h2{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h4{
+      text-align: center;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.button{
+    background-color: dodgerblue;
+    width: 150px;
+    height: 20px;
+}
+.tablo { 
+    margin:100px;
+    border: 1px solid rgba(180, 169, 169, 0.973);
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+  }
+th{
+    
+    border: 1px solid black;
+}
+.body{
+    background-color: rgba(170, 194, 245, 0.548);
+}

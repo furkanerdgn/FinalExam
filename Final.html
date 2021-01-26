@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E ticaret Sistem</title>
+    <link rel="stylesheet" href="Final.css">
+</head>
+<body class="body">
+    <img class="logo" src="bm.png">
+    <h2 class="h2">Erciyes Üniversitesi Bilgisayar Mühendisliği Bölümü Web Programlama 1 dersi final sorusu</h2>
+    <h2 class="h2">Dr.Öğr.Üyesi Fehim Köylü</h2>
+    <h1 class="h1">Alışveriş Uygulaması</h1>
+    <h4 class="h4">Vermek istediğiniz siparişler için aşağıdaki listeden seçerek adedini belirleyiniz</h4>
+     <div class="tables">
+        <table class="tablo">
+        <tr>
+            <th>
+                Ekmek
+            </th>           
+        </tr>
+        <tr>
+            <td>
+                2 Tl/adet
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Somun ekmek
+            </td>
+        </tr>
+        <tr>
+            <td>
+                200gr
+            </td>
+        </tr>
+        <tr>         
+                <td>
+                    <button class="button" type="button">Sepete Ekle</button>
+                </td>        
+        </tr>
+    </table>
+    <table class="tablo">
+        <tr>
+            <th>
+                Çikolata
+            </th>           
+        </tr>
+        <tr>
+            <td>
+                5 Tl/adet
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bitter Çikolata
+            </td>
+        </tr>
+        <tr>
+            <td>
+                60 gr
+            </td>
+        </tr>
+        <tr>          
+                <td>
+                    <button class="button" type="button">Sepete Ekle</button>
+                </td>
+        </tr>
+    </table>
+    <table class="tablo">
+        <tr>
+            <th>
+                Domates
+            </th>           
+        </tr>
+        <tr>
+            <td>
+                6 Tl/adet
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Domates
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Antalya Sera
+            </td>
+        </tr>
+        <tr>            
+            <td>
+                <button class="button" type="button">Sepete Ekle</button>
+            </td>            
+        </tr>
+    </table>
+    </div>
+    <form ng-submit="kuponAdd()">
+        <input type="text" ng-model="siparisgir" size="50" placeholder="İndirim Kuponu">
+        <input type="submit" value="Kupon gir">
+    </form>   
+    <script>
+        angular.module('siparis', [])
+            .controller('siparis', function($scope) {
+                $scope.tasks = [];
+                $scope.add = function() {
+                    $scope.tasks.push($scope.title);
+                }
+                $scope.delete = function() {
+                    $scope.tasks.splice(this.$index, 1);
+                }
+            })
+        </script>
+    <div ng-app="siparis" ng-controller="siparis">
+        </form>
+        <ul>
+            <li ng-repeat="$">{{ t }} <button ng-click="delete()">x</button></li>
+        </ul>
+    </div>
+</body>
+</html>
